@@ -115,12 +115,25 @@ function Chatbot() {
       true, // 開啟流式
       (data) => {
         console.log("Received data:", data); // 確認接收到的數據
-        if (data.chunk) {
+        if(data.chunk){
           setMessages(prevMessages => {
-            const updatedMessages = prevMessages.slice(0, -1); // 移除 loading 訊息
-            const lastMessage = updatedMessages.filter(msg => !msg.user).pop(); // 只保留機器人的消息
-            const newText = lastMessage ? lastMessage.text + data.chunk : data.chunk; // 逐字累加
-            console.log("New text:", newText); // 確認新的文字
+            // 檢查最後一條消息是否為加載消息
+            const lastMessage = prevMessages[prevMessages.length - 1];
+            let updatedMessages = prevMessages;
+            
+            // 如果最後一條消息是加載消息，則移除它
+            if (lastMessage && lastMessage.text === '...') {
+              updatedMessages = prevMessages.slice(0, -1);
+            }
+            
+            const lastBotMessage = updatedMessages.filter(msg => !msg.user).pop();
+            // console.log("Last Bot Message:", lastBotMessage);
+            const newText = lastBotMessage ? lastBotMessage.text + data.chunk : data.chunk;
+            if(updatedMessages.length > 0 && !updatedMessages[updatedMessages.length - 1].user){
+              updatedMessages = updatedMessages.slice(0, -1);
+            }
+            
+            
             return [...updatedMessages, { text: newText, user: false }];
           });
         }

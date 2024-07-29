@@ -120,3 +120,16 @@
     font-size: 18px; /* 調整字體大小 */
     color: #007bff; /* 調整顏色 */
   }
+
+  .reset-session-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .reset-session-button:hover {
+    background-color: #e0e0e0;
+  }
