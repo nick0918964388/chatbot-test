@@ -1,0 +1,122 @@
+.chatbot {
+    width: 50%; /* 設定聊天室寬度為50% */
+    height: 50vh; /* 高度設為視窗的50% */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* 背景顏色 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: height 0.3s ease, opacity 0.3s ease; /* 添加動畫效果 */
+    opacity: 1; /* 初始不透明度 */
+  }
+  
+  .chat-header {
+    background-color: #007bff; /* 標題背景顏色 */
+    color: white; /* 標題文字顏色 */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .minimize-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9; /* 訊息區域背景顏色 */
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .user {
+    justify-content: flex-end;
+  }
+  
+  .bot {
+    justify-content: flex-start;
+  }
+  
+  .avatar {
+    width: 40px; /* 頭像大小 */
+    height: 40px; /* 確保機器人和使用者圖像相同大小 */
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .message-text {
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .user .message-text {
+    background-color: #d1e7dd; /* 使用者訊息背景顏色 */
+  }
+  
+  .bot .message-text {
+    background-color: #f8d7da; /* 機器人訊息背景顏色 */
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff; /* 輸入區域背景顏色 */
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chat-input button {
+    margin-left: 10px;
+    background-color: #007bff; /* 按鈕背景顏色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .chatbot-icon {
+    width: 60px; /* 調整圖示大小 */
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .clear-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px; /* 調整按鈕間距 */
+  }
+
+  .loading-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 18px; /* 調整字體大小 */
+    color: #007bff; /* 調整顏色 */
+  }
