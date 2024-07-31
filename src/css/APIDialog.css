@@ -1,0 +1,46 @@
+.api-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.api-dialog {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.api-dialog h2 {
+  margin-top: 0;
+}
+
+.api-dialog form {
+  display: flex;
+  flex-direction: column;
+}
+
+.api-dialog input,
+.api-dialog textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dialog-buttons button {
+  padding: 8px 16px;
+  cursor: pointer;
+}

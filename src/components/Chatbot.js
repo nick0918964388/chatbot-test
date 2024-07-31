@@ -95,13 +95,30 @@ function Chatbot() {
   };
 
   const runFlow = async (inputValue) => {
-    const flowIdOrName = '5af51bd8-5570-4592-9aef-a8399d2de06c';
+    // const flowIdOrName = '5af51bd8-5570-4592-9aef-a8399d2de06c'; //ask-llm
+    const flowIdOrName = '08917f3a-486a-445c-9542-3bf117df08ba'; //ask-api
+    // const tweaks = {
+    //   "ChatInput-Uuesi": {},
+    //   "GroqModel-qTdwH": {},
+    //   "ChatOutput-N0gYt": {},
+    //   "Memory-iwMxh": {},
+    //   "Prompt-sEPR2": {}
+    // };
     const tweaks = {
-      "ChatInput-Uuesi": {},
-      "GroqModel-qTdwH": {},
-      "ChatOutput-N0gYt": {},
-      "Memory-iwMxh": {},
-      "Prompt-sEPR2": {}
+      "ChatInput-k8Ms5": {},
+      "CrewAIAgentComponent-m9Vfd": {},
+      "GroqModel-Iy3PZ": {},
+      "ChatOutput-qg0VD": {},
+      "SequentialCrewComponent-OJlUz": {},
+      "SequentialTaskComponent-bbtqm": {},
+      "Prompt-hjNao": {},
+      "APIRequest-vfxQe": {},
+      "CrewAIAgentComponent-ijLX9": {},
+      "ParseData-IACVx": {},
+      "SequentialTaskComponent-EmB3c": {},
+      "SequentialCrewComponent-YIHRu": {},
+      "Prompt-nvsjr": {},
+      "Memory-9JyCX": {}
     };
 
     // 顯示 loading 訊息
@@ -115,25 +132,25 @@ function Chatbot() {
       true, // 開啟流式
       (data) => {
         console.log("Received data:", data); // 確認接收到的數據
-        if(data.chunk){
+        if (data.chunk) {
           setMessages(prevMessages => {
             // 檢查最後一條消息是否為加載消息
             const lastMessage = prevMessages[prevMessages.length - 1];
             let updatedMessages = prevMessages;
-            
+
             // 如果最後一條消息是加載消息，則移除它
             if (lastMessage && lastMessage.text === '...') {
               updatedMessages = prevMessages.slice(0, -1);
             }
-            
+
             const lastBotMessage = updatedMessages.filter(msg => !msg.user).pop();
             // console.log("Last Bot Message:", lastBotMessage);
             const newText = lastBotMessage ? lastBotMessage.text + data.chunk : data.chunk;
-            if(updatedMessages.length > 0 && !updatedMessages[updatedMessages.length - 1].user){
+            if (updatedMessages.length > 0 && !updatedMessages[updatedMessages.length - 1].user) {
               updatedMessages = updatedMessages.slice(0, -1);
             }
-            
-            
+
+
             return [...updatedMessages, { text: newText, user: false }];
           });
         }
@@ -169,10 +186,11 @@ function Chatbot() {
       {isOpen && (
         <div className="chatbot">
           <div className="chat-header">
-            我的聊天機器人
+            <img src={require('../images/tra_icon.png')} alt="臺鐵圖標" className="tra-icon" />
+            臺鐵智能助手
             <div>
               <button className="minimize-button" onClick={() => setIsOpen(false)}>−</button>
-              <button className="clear-button" onClick={clearChat}>清除對話</button>
+              <button className="clear-button" onClick={clearChat}>↺</button>
             </div>
           </div>
           <div className="chat-messages">

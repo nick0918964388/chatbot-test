@@ -1,0 +1,57 @@
+.collapsible-json {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.json-item {
+  margin-left: 0;
+}
+
+.json-key {
+  color: #881391;
+  margin-right: 5px;
+}
+
+.json-string {
+  color: #1a1aa6;
+}
+
+.json-number {
+  color: #1c00cf;
+}
+
+.json-bracket, .json-bracket-close {
+  color: #000000;
+}
+
+.json-comma {
+  color: #000000;
+}
+
+.json-content {
+  margin-left: 0;
+}
+
+.json-property, .json-comma {
+  display: block;
+}
+
+/* 定義 1tab 的寬度 */
+.json-item, .json-property {
+  --tab-width: 4ch;  /* 可以根據需要調整 */
+}
+
+.json-item[style*="marginLeft: 1tab"] {
+  margin-left: var(--tab-width);
+}
+
+.json-property[style*="marginLeft: 1tab"] {
+  margin-left: var(--tab-width);
+}

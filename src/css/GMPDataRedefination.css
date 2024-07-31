@@ -1,0 +1,152 @@
+.gmp-data-redefination {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .sql-input-container, .preview-container, .api-form, .api-list {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .formatted-sql {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+    text-align: left;
+  }
+  
+  .formatted-sql strong {
+    font-weight: bold;
+    color: #0066cc;
+  }
+  
+  .formatted-sql .comment {
+    background-color: #90EE90;
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    text-align: left;
+  }
+  
+  .api-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .delete-button:hover {
+    background-color: #ff3333;
+  }
+
+  .add-api-button {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .add-api-button:hover {
+    background-color: #45a049;
+  }
+
+  .status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .status-badge.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .status-badge.inactive {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .toggle-button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .toggle-button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .toggle-button.inactive {
+    background-color: #f44336;
+    color: white;
+  }

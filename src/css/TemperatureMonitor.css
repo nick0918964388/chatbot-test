@@ -1,0 +1,89 @@
+.temperature-monitor {
+    display: flex;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .train-info {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .train-details {
+    margin-bottom: 10px;
+  }
+  
+  .temperature-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .temperature-cell {
+    padding: 5px;
+    text-align: center;
+    background-color: #e0e0ff;
+    border-radius: 3px;
+  }
+  
+  .temperature-cell.warning {
+    background-color: #ffff00;
+  }
+  
+  .temperature-cell.alert {
+    background-color: #ff0000;
+    color: white;
+  }
+  
+  .axle-temperatures {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .axle-temperatures span {
+    background-color: #d3d3d3;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  .alert-info {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .side-panel {
+    margin-left: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .legend, .data-collection-time, .alert-conditions {
+    margin-bottom: 20px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0ff;
+    margin-right: 10px;
+  }
+  
+  .yellow-alert {
+    color: #ffff00;
+  }
+  
+  .red-alert {
+    color: #ff0000;
+  }

@@ -1,5 +1,5 @@
 .chatbot {
-    width: 50%; /* 設定聊天室寬度為50% */
+    width: 25%; /* 設定聊天室寬度為25% */
     height: 50vh; /* 高度設為視窗的50% */
     border: 1px solid #ccc;
     border-radius: 8px;
