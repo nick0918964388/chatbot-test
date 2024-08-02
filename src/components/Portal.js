@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import RailwayDashboard from './RailwayDashboard';
 import RailwayStatement from './RailwayStatement';
+import WindTurbineDashboard from './WindTurbineDashboard';
 
 function Portal() {
   const [selectedFunction, setSelectedFunction] = useState(null);
@@ -40,6 +41,10 @@ function Portal() {
       children: [
       { name: '可用率 Dashboard', icon: faFlask,  component: RailwayDashboard      },
       { name: '車輛運用 Dashboard', icon: faFlask,  component: RailwayStatement      }
+    ] },
+    { name: 'HL', icon: faTrain , 
+      children: [
+      { name: '風力發電 Dashboard', icon: faFlask,  component: WindTurbineDashboard      }
     ] }
   ];
 
