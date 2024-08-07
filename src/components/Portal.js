@@ -15,6 +15,7 @@ import {
 import RailwayDashboard from './RailwayDashboard';
 import RailwayStatement from './RailwayStatement';
 import WindTurbineDashboard from './WindTurbineDashboard';
+import AlertSettings from './AlertSettings';
 
 function Portal() {
   const [selectedFunction, setSelectedFunction] = useState(null);
@@ -45,6 +46,10 @@ function Portal() {
     { name: 'HL', icon: faTrain , 
       children: [
       { name: '風力發電 Dashboard', icon: faFlask,  component: WindTurbineDashboard      }
+    ] },
+    { name: 'TRC', icon: faTrain , 
+      children: [
+      { name: 'Alert Settings', icon: faFlask,  component: AlertSettings      }
     ] }
   ];
 
