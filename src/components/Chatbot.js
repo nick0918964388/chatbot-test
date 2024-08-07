@@ -112,13 +112,14 @@ function Chatbot() {
       "SequentialCrewComponent-OJlUz": {},
       "SequentialTaskComponent-bbtqm": {},
       "Prompt-hjNao": {},
-      "APIRequest-vfxQe": {},
       "CrewAIAgentComponent-ijLX9": {},
       "ParseData-IACVx": {},
       "SequentialTaskComponent-EmB3c": {},
       "SequentialCrewComponent-YIHRu": {},
       "Prompt-nvsjr": {},
-      "Memory-9JyCX": {}
+      "Memory-9JyCX": {},
+      "APIRequest-WMJH3": {},
+      "OllamaModel-sRLiZ": {}
     };
 
     // 顯示 loading 訊息
