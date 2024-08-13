@@ -80,6 +80,7 @@ function AlertSettings() {
     setIsModalOpen(false);
   };
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
